@@ -27,6 +27,8 @@ set(PROJECT_SOURCES
         admin.cpp
         trajet.cpp
         trajet.h
+        colis.h
+        colis.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
