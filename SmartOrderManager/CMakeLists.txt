@@ -17,6 +17,16 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+        personne.h
+        personne.cpp
+        chauffeur.h
+        chauffeur.cpp
+        dispatcher.cpp
+        dispatcher.h
+        admin.h
+        admin.cpp
+        trajet.cpp
+        trajet.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
