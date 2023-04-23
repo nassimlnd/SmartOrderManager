@@ -8,7 +8,7 @@
 class Dispatcher : public Personne
 {
 public:
-    Dispatcher();
+    Dispatcher(int id);
     void remplir();
     void dispatch();
 private:

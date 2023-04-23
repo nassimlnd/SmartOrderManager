@@ -9,7 +9,7 @@ class Admin : public Personne
 public:
     Admin();
     void nbColisLivres(Chauffeur chauffeur);
-    void montantCollecte(Chauffeur chauffer);
+    void montantCollecte(Chauffeur chauffeur);
 private:
     int id;
 
