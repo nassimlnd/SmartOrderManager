@@ -1,9 +1,10 @@
 #include "Colis.h"
 
+int nextId=0;
 
-Colis::Colis(int id, std::string villeArrivee, std::string dateAjoutColis, int status)
+Colis::Colis(std::string villeArrivee, std::string dateAjoutColis, int status)
 {
-    this->idColis = id;
+    this->idColis = nextId++;
     this->villeArrivee = villeArrivee;
     this->dateAjoutColis = dateAjoutColis;
     this->status = status;

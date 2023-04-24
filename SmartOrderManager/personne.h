@@ -7,7 +7,7 @@ class Personne
 {
 public:
     Personne();
-     Personne( string nom, string prenom, string adresse , int id );
+     Personne( string nom, string prenom, string adresse);
      ~Personne();
          std::string getNom();
          //Guetters

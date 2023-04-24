@@ -29,7 +29,6 @@ set(PROJECT_SOURCES
         trajet.h
         colis.h
         colis.cpp
-        Trajet.txt
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

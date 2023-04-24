@@ -4,11 +4,12 @@
 #include <cstdlib>
 #include <iostream>
 
-//int nextId = 0;
+int nextIdDispatcher = 0;
 
-Dispatcher::Dispatcher(string nom, string prenom, string adresse, int id) : Personne(nom, prenom,adresse, id)
+
+Dispatcher::Dispatcher(string nom, string prenom, string adresse) : Personne(nom, prenom,adresse)
 {
-    //id = ++nextId;
+    id = ++nextIdDispatcher;
     // Revoir le système d'id
 }
 
@@ -24,7 +25,7 @@ void Dispatcher::remplir()
         int idColis = valeur;
         std::string villeArrivee = "Ville" + std::to_string(valeur);
         std::string dateAjoutColis = "date";
-        listeColis.push_back(Colis(idColis, villeArrivee, dateAjoutColis, 0));
+        listeColis.push_back(Colis(villeArrivee, dateAjoutColis, 0));
 
     }
 }

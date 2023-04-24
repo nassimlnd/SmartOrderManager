@@ -7,7 +7,7 @@
 class Trajet {
 public:
 
-    Trajet(int idChauffeur, std::string villeDepart, std::string villeArrivee, std::string horaireDepart, std::string horaireArrivee, double poids, double prix, int status,int nombreColis);
+    Trajet(int idChauffeur, std::string villeDepart, std::string villeArrivee, std::string horaireDepart, std::string horaireArrivee, double poids, double prix, int status);
     int getIdTrajet() const;
     int getIdChauffeur() const;
     const std::string& getVilleDepart() const;

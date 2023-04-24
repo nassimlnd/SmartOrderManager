@@ -10,7 +10,7 @@ Personne::Personne()
 }
 
 // Constructeur avec paramètres
-Personne::Personne(string nom, string prenom, string adresse, int id)
+Personne::Personne(string nom, string prenom, string adresse)
 {
     this->nom = nom;
     this->prenom = prenom;

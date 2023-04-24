@@ -7,7 +7,7 @@ Admin::Admin() {
 }
 
 
-void Admin::nbColisLivres(Chauffeur Chauffeur)
+void Admin::nbColisLivres(Chauffeur Chauffeur) const
 {
     int nombreColis=0;
 

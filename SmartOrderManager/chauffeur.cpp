@@ -2,7 +2,7 @@
 
 int Chauffeur :: nextId=0;
 
-Chauffeur::Chauffeur(std::string nom, std::string prenom, std::string adresse) : Personne(nom, prenom,adresse, id)
+Chauffeur::Chauffeur(std::string nom, std::string prenom, std::string adresse) : Personne(nom, prenom,adresse)
 {
     id = ++nextId;
 }

@@ -12,18 +12,14 @@ class Admin : public Personne {
         int id;
     public:
         Admin();
-<<<<<<< HEAD
-        Admin(std::string nom, std::string prenom, std::string adresse, int id);
-        void nbColisLivres(Chauffeur Chauffeur) ;
-        void montantCollecte(Chauffeur Chauffeur) ;
-=======
-        Admin(std::string nom, std::string prenom, std::string adresse, int id_admin);
+        Admin(std::string nom, std::string prenom, std::string adresse);
+
+
+
         void nbColisLivres(Chauffeur Chauffeur) const;
         void montantCollecte(Chauffeur Chauffeur) const;
-        void nbColisLivres(Chauffeur chauffeur);
-        void montantCollecte(Chauffeur chauffeur);
 
->>>>>>> d5e00ac1d50a3e672160f8d39c9150d9a17504ce
+
 };
 
 #endif // ADMIN_H

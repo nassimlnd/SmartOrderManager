@@ -11,7 +11,7 @@ class Dispatcher : public Personne
 {
 public:
 
-    Dispatcher(string nom, string prenom, string adresse, int id);
+    Dispatcher(string nom, string prenom, string adresse);
     void remplir();
     void dispatch(std::vector<Trajet>& trajets);
     std::vector<Colis> getColis();
