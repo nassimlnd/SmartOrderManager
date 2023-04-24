@@ -16,6 +16,7 @@ public:
     double getPoids() const;
     double getPrix() const;
     int getStatus() const;
+    int getNombreColis()const;
 
     void setVilleDepart(const std::string& villeDepart);
     void setVilleArrivee(const std::string& villeArrivee);
@@ -24,10 +25,9 @@ public:
     void setPoids(double poids);
     void setPrix(double prix);
     void setStatus(int status);
-
+    void setNombreColis(int nombreColis);
 private:
     static int idTrajet;
-    int m_idTrajet;
     int idChauffeur;
     std::string villeDepart;
     std::string villeArrivee;
@@ -36,6 +36,7 @@ private:
     double poids;
     double prix;
     int status;
+    int nombreColis;
 };
 
 #endif // TRAJET_H
