@@ -2,6 +2,7 @@
 #define TRAJET_H
 
 #include <string>
+#include <QString>
 
 class Trajet {
 public:
@@ -27,8 +28,9 @@ public:
     void setPrix(double prix);
     void setStatus(int status);
     void setNombreColis(int nombreColis);
+    QString toString() const;
 private:
-    static int idTrajet;
+    int idTrajet;
     int idChauffeur;
     std::string villeDepart;
     std::string villeArrivee;
@@ -38,6 +40,10 @@ private:
     double prix;
     int status;
     int nombreColis;
+    //ajout du trajet dans le txt au moment ou il est créée.
+    //std::string const fileLocation;
+    void writeTrajet(const Trajet& trajet);
+
 };
 
 #endif // TRAJET_H
