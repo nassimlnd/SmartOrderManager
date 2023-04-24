@@ -2,7 +2,7 @@
 
 int nextId = 0;
 
-Trajet::Trajet(int idChauffeur, std::string villeDepart, std::string villeArrivee, std::string horaireDepart, std::string horaireArrivee, double poids, double prix, int status) {
+Trajet::Trajet(int idChauffeur, std::string villeDepart, std::string villeArrivee, std::string horaireDepart, std::string horaireArrivee, double poids, double prix, int status, int nombreColis) {
     this->idTrajet = ++nextId;
     this->idChauffeur = idChauffeur;
     this->villeDepart = villeDepart;
@@ -12,6 +12,7 @@ Trajet::Trajet(int idChauffeur, std::string villeDepart, std::string villeArrive
     this->poids = poids;
     this->prix = prix;
     this->status = status;
+    this->nombreColis= nombreColis;
 }
 
 
@@ -52,3 +53,6 @@ int Trajet::getStatus() const
     return status;
 }
 
+int Trajet::getNombreColis() const {
+    return nombreColis;
+}

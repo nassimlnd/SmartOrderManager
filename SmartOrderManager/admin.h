@@ -12,9 +12,9 @@ class Admin : public Personne {
         int id;
     public:
         Admin();
-        Admin(std::string nom, std::string prenom, std::string adresse, int id_admin);
-        void nbColisLivres(Chauffeur Chauffeur) const;
-        void montantCollecte(Chauffeur Chauffeur) const;
+        Admin(std::string nom, std::string prenom, std::string adresse, int id);
+        void nbColisLivres(Chauffeur Chauffeur) ;
+        void montantCollecte(Chauffeur Chauffeur) ;
 };
 
 #endif // ADMIN_H
