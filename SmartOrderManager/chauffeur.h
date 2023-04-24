@@ -10,7 +10,7 @@ class Chauffeur : public Personne
 public:
     Chauffeur(std::string nom, std:: string prenom, std::string adresse);
     int getId();
-    std:: vector<Trajet> gettrajets();
+    std::vector<Trajet> getTrajets();
     void ajout(Trajet trajet);
     void supprimer(int index);
     void modifier(int index, Trajet trajet);

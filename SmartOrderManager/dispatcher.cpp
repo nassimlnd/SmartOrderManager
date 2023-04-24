@@ -1,31 +1,43 @@
 #include "dispatcher.h"
+#include "trajet.h"
+#include <cstdlib>
+#include <iostream>
 
-int Dispatcher::nextId=0;
-Dispatcher::Dispatcher()
+//int nextId = 0;
+
+Dispatcher::Dispatcher(string nom, string prenom, string adresse, int id) : Personne(nom, prenom,adresse, id)
 {
-    id = ++nextId;
+    //id = ++nextId;
+    // Revoir le système d'id
 }
 
-Dispatcher::Dispatcher(int id, ) : Personne(nom, prenom,adresse, id)
+std::vector<Colis> Dispatcher::getColis()
 {
-    id = ++nextId;
+    return listeColis;
 }
 
-std::vector<Colis> Dispatcher::getcolis()
+void Dispatcher::remplir()
 {
-    return coli;
-}
-void Dispatcher::remplir(Colis colis)
-{
-    for (int i =0; i<Math.random();i++){
-        Colis colis = new Colis;
-        coli.push_back(colis);
+    int valeur = rand()%10 + 1;
+    for (int i =0; i < valeur; i++){
+        int idColis = valeur;
+        std::string villeArrivee = "Ville" + std::to_string(valeur);
+        std::string dateAjoutColis = "date";
+        listeColis.push_back(Colis(idColis, villeArrivee, dateAjoutColis, 0));
 
     }
-
 }
 
-void Dispatcher::dispatch(Colis colis)
+void Dispatcher::dispatch(std::vector<Trajet>& trajets)
 {
-    coli.push_back(colis);
+    for (auto& colis : listeColis) {
+        for (auto& trajet : trajets) {
+            if (colis.getVilleArrivee() == trajet.getVilleArrivee() && colis.getStatus() == 0 && trajet.getStatus() == 0) {
+                colis.setStatus(1);
+                trajet.setStatus(1);
+                std::cout << "Le colis " << colis.getIdColis() << " a été affecté au trajet " << trajet.getIdTrajet() << "." << std::endl;
+                break;
+            }
+        }
+    }
 }

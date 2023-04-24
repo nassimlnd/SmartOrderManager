@@ -1,14 +1,14 @@
 #include "trajet.h"
 
-int Trajet::nextId = 0;
+int nextId = 0;
 
-Trajet::Trajet(int idChauf, std::string villeDep, std::string villeArr, std::string horaireDep, std::string horaireArr, double poids, double prix, int status) {
+Trajet::Trajet(int idChauffeur, std::string villeDepart, std::string villeArrivee, std::string horaireDepart, std::string horaireArrivee, double poids, double prix, int status) {
     this->idTrajet = ++nextId;
-    this->idChauf = idChauf;
-    this->villeDep = villeDep;
-    this->villeArr = villeArr;
-    this->horaireDep = horaireDep;
-    this->horaireArr = horaireArr;
+    this->idChauffeur = idChauffeur;
+    this->villeDepart = villeDepart;
+    this->villeArrivee = villeArrivee;
+    this->horaireDepart = horaireDepart;
+    this->horaireArrivee = horaireArrivee;
     this->poids = poids;
     this->prix = prix;
     this->status = status;
@@ -18,24 +18,24 @@ int Trajet::getIdTrajet() const {
     return idTrajet;
 }
 
-int Trajet::getIdChauf() const {
-    return idChauf;
+int Trajet::getIdChauffeur() const {
+    return idChauffeur;
 }
 
-std::string Trajet::getVilleDep() const {
-    return villeDep;
+const std::string& Trajet::getVilleDepart() const {
+    return villeDepart;
 }
 
-std::string Trajet::getVilleArr() const {
-    return villeArr;
+const std::string& Trajet::getVilleArrivee() const {
+    return villeArrivee;
 }
 
-std::string Trajet::getHoraireDep() const {
-    return horaireDep;
+const std::string& Trajet::getHoraireDepart() const {
+    return horaireDepart;
 }
 
-std::string Trajet::getHoraireArr() const {
-    return horaireArr;
+const std::string& Trajet::getHoraireArrivee() const {
+    return horaireArrivee;
 }
 
 double Trajet::getPoids() const {
