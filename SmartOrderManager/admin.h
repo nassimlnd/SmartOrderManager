@@ -15,6 +15,9 @@ class Admin : public Personne {
         Admin(std::string nom, std::string prenom, std::string adresse, int id_admin);
         void nbColisLivres(Chauffeur Chauffeur) const;
         void montantCollecte(Chauffeur Chauffeur) const;
+        void nbColisLivres(Chauffeur chauffeur);
+        void montantCollecte(Chauffeur chauffeur);
+
 };
 
 #endif // ADMIN_H

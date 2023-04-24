@@ -1,4 +1,8 @@
 #include "Trajet.h"
+#include <fstream>
+#include <iostream>
+#include <QFile>
+#include  <QTextStream>
 
 int nextId = 0;
 
@@ -12,10 +16,23 @@ Trajet::Trajet(int idChauffeur, std::string villeDepart, std::string villeArrive
     this->poids = poids;
     this->prix = prix;
     this->status = status;
+    writeTrajet(*this);
 }
 
+void Trajet::writeTrajet(const Trajet& trajet){
+    QFile file("Trajet.txt");
+    if(file.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)){
+        QTextStream ecriture(&file);
+        ecriture << trajet.toString() << Qt::endl;
+        file.close();
+    }else{
+        std::cerr << "erreur d'ouverture du fichier Trajet.txt "<< std::endl;
+    }
+}
 
-
+int Trajet::getIdTrajet() const{
+    return idTrajet;
+}
 
 int Trajet::getIdChauffeur() const {
     return idChauffeur;
@@ -50,5 +67,17 @@ double Trajet::getPrix() const
 int Trajet::getStatus() const
 {
     return status;
+}
+
+void Trajet::setStatus(int status){
+    this->status = status;
+}
+
+QString Trajet::toString() const
+{
+    QString result =  QString::fromStdString(std::to_string(idTrajet) + "|" + std::to_string(idChauffeur) + "|" + villeDepart + "|" + villeArrivee + "|"
+                                            + horaireDepart + "|" + horaireArrivee + "|" + std::to_string(poids) + "|" + std::to_string(prix) + "|" + std::to_string(status));
+    return result;
+
 }
 
