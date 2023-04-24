@@ -1,55 +1,68 @@
-#include "trajet.h"
+#include "Trajet.h"
 
-int Trajet::nextId = 0;
+int Trajet::idTrajet = 0;
 
-Trajet::Trajet(int idChauf, std::string villeDep, std::string villeArr, std::string horaireDep, std::string horaireArr, double poids, double prix, int status) {
-    this->idTrajet = ++nextId;
-    this->idChauf = idChauf;
-    this->villeDep = villeDep;
-    this->villeArr = villeArr;
-    this->horaireDep = horaireDep;
-    this->horaireArr = horaireArr;
-    this->poids = poids;
-    this->prix = prix;
-    this->status = status;
+Trajet::Trajet(int idChauffeur, const std::string& villeDepart, const std::string& villeArrivee,
+               const std::string& horaireDepart, const std::string& horaireArrivee,
+               double poids, double prix) :
+    idChauffeur(idChauffeur),
+    villeDepart(villeDepart),
+    villeArrivee(villeArrivee),
+    horaireDepart(horaireDepart),
+    horaireArrivee(horaireArrivee),
+    poids(poids),
+    prix(prix),
+    status(0)
+{
+    idTrajet = ++idTrajet;
 }
 
-int Trajet::getIdTrajet() const {
+Trajet::~Trajet()
+{
+}
+
+int Trajet::getIdTrajet() const
+{
     return idTrajet;
 }
 
-int Trajet::getIdChauf() const {
-    return idChauf;
+int Trajet::getIdChauffeur() const
+{
+    return idChauffeur;
 }
 
-std::string Trajet::getVilleDep() const {
-    return villeDep;
+std::string Trajet::getVilleDepart() const
+{
+    return villeDepart;
 }
 
-std::string Trajet::getVilleArr() const {
-    return villeArr;
+std::string Trajet::getVilleArrivee() const
+{
+    return villeArrivee;
 }
 
-std::string Trajet::getHoraireDep() const {
-    return horaireDep;
+std::string Trajet::getHoraireDepart() const
+{
+    return horaireDepart;
 }
 
-std::string Trajet::getHoraireArr() const {
-    return horaireArr;
+std::string Trajet::getHoraireArrivee() const
+{
+    return horaireArrivee;
 }
 
-double Trajet::getPoids() const {
+double Trajet::getPoids() const
+{
     return poids;
 }
 
-double Trajet::getPrix() const {
+double Trajet::getPrix() const
+{
     return prix;
 }
 
-int Trajet::getStatus() const {
+int Trajet::getStatus() const
+{
     return status;
 }
 
-void Trajet::setStatus(int status) {
-    this->status = status;
-}
