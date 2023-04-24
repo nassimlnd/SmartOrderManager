@@ -1,12 +1,14 @@
 #include "mainwindow.h"
 #include "trajet.h"
 #include <QApplication>
-
+#include <iostream>
 
 int main(int argc, char *argv[])
 {
      Trajet test(12, "testVilleDepart", "testVilleD'arrivee", "testHoraireDepart", "testHoraireDepart", 12.0, 35.5, 2);
      Trajet test2(14, "testVilleDepart", "testVilleD'arrivee", "testHoraireDepart", "testHoraireDepart", 17.0, 1005.5, 2);
+
+     std::cout <<test.getHoraireArrivee();
 
     QApplication a(argc, argv);
     MainWindow w;

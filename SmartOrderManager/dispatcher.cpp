@@ -22,7 +22,6 @@ void Dispatcher::remplir()
 {
     int valeur = rand()%10 + 1;
     for (int i =0; i < valeur; i++){
-        int idColis = valeur;
         std::string villeArrivee = "Ville" + std::to_string(valeur);
         std::string dateAjoutColis = "date";
         listeColis.push_back(Colis(villeArrivee, dateAjoutColis, 0));
