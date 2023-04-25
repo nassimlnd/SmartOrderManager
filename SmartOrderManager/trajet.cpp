@@ -3,8 +3,11 @@
 #include <iostream>
 #include <QFile>
 #include  <QTextStream>
-
+#include <QMessageBox>
+#include <vector>
 int nextIdTrajet = 0;
+
+ std::vector<Trajet> AllTrajet;
 
 Trajet::Trajet(int idChauffeur, std::string villeDepart, std::string villeArrivee, std::string horaireDepart, std::string horaireArrivee, double poids, double prix, int status) {
     this->idTrajet = ++nextIdTrajet;
@@ -18,9 +21,10 @@ Trajet::Trajet(int idChauffeur, std::string villeDepart, std::string villeArrive
     this->status = status;
     this->nombreColis= nombreColis;
     writeTrajet(*this);
+    AllTrajet.push_back(*this);
 }
 
-void Trajet::writeTrajet(const Trajet& trajet){
+void Trajet::writeTrajet( const Trajet& trajet){
     QFile file("Trajet.txt");
     if(file.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)){
         QTextStream ecriture(&file);
@@ -30,6 +34,33 @@ void Trajet::writeTrajet(const Trajet& trajet){
         std::cerr << "erreur d'ouverture du fichier Trajet.txt "<< std::endl;
     }
 }
+
+
+
+
+
+void Trajet::modifierTrajet(int idTrajet, const Trajet& trajet){
+
+    for (int i =0; i < AllTrajet.size(); i++ ){
+        if (idTrajet == i){
+            AllTrajet[i].setVilleArrivee(trajet.getVilleArrivee());
+            AllTrajet[i].setVilleDepart(trajet.getVilleDepart());
+            AllTrajet[i].setHoraireArrivee(trajet.getHoraireArrivee());
+            AllTrajet[i].setHoraireDepart(trajet.getHoraireDepart());
+            AllTrajet[i].setStatus(trajet.getStatus());
+            AllTrajet[i].setPoids(trajet.getPoids());
+            AllTrajet[i].setPrix(trajet.getPrix());
+
+        }
+    }
+
+
+}
+
+std::vector<Trajet> getAllTrajet()  {
+   return AllTrajet;
+}
+
 
 int Trajet::getIdTrajet() const{
     return idTrajet;

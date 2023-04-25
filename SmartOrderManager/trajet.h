@@ -3,6 +3,7 @@
 
 #include <string>
 #include <QString>
+#include <vector>
 
 class Trajet {
 public:
@@ -18,6 +19,7 @@ public:
     double getPrix() const;
     int getStatus() const;
     int getNombreColis()const;
+
 
 
     void setVilleDepart(const std::string& villeDepart);
@@ -40,9 +42,12 @@ private:
     double prix;
     int status;
     int nombreColis;
+
     //ajout du trajet dans le txt au moment ou il est créée.
     //std::string const fileLocation;
     void writeTrajet(const Trajet& trajet);
+
+    void modifierTrajet(int idTrajet, const Trajet& trajet);
 
 };
 
