@@ -51,9 +51,6 @@ void Trajet::modifierTrajet(int idTrajet, const Trajet& trajet){
         QFile::remove("Trajet.txt");
             writeTrajet(*this);
     }
-
-
-
 }
 
 std::vector<Trajet> getAllTrajet()  {

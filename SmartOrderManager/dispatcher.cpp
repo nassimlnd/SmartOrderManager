@@ -3,13 +3,17 @@
 #include "trajet.h"
 #include <cstdlib>
 #include <iostream>
+#include <QFile>
+#include  <QTextStream>
+#include <QMessageBox>
 
 int nextIdDispatcher = 0;
 
 
 Dispatcher::Dispatcher(string nom, string prenom, string adresse) : Personne(nom, prenom,adresse)
 {
-    id = ++nextIdDispatcher;
+    idDispatcher = ++nextIdDispatcher;
+     writeDispatcher(*this);
     // Revoir le système d'id
 }
 
@@ -42,3 +46,21 @@ void Dispatcher::dispatch(std::vector<Trajet>& trajets)
         }
     }
 }
+
+void Dispatcher::writeDispatcher( const Dispatcher& dispatcher){
+    QFile file("dispatcher.txt");
+    if(file.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)){
+        QTextStream ecriture(&file);
+        ecriture << dispatcher.toString() << Qt::endl;
+        file.close();
+    }else{
+        std::cerr << "erreur d'ouverture du fichier chauffeur.txt "<< std::endl;
+    }
+}
+
+QString Dispatcher::toString() const
+{
+    QString result =  QString::fromStdString(std::to_string(idDispatcher) + "|" + nom + "|" + prenom + "|" + adresse);
+    return result;
+}
+

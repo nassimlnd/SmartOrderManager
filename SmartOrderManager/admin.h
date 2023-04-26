@@ -9,16 +9,15 @@
 
 class Admin : public Personne {
     private:
-        int id;
+        int idAdmin;
+        static int nextId;
     public:
-        Admin();
         Admin(std::string nom, std::string prenom, std::string adresse);
-
-
 
         void nbColisLivres(Chauffeur Chauffeur) const;
         void montantCollecte(Chauffeur Chauffeur) const;
-
+        void writeAdmin( const Admin& admin);
+        QString toString() const;
 
 };
 

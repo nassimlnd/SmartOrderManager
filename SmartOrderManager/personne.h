@@ -19,7 +19,7 @@ public:
          void setPrenom(const std::string& prenom);
          void setAdresse(const std::string& adresse);
          void setId(const int& ip);
-private :
+protected :
     string nom;
     string prenom;
     string adresse;

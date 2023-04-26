@@ -1,10 +1,18 @@
-
+#include "personne.h"
 #include "admin.h"
 #include <iostream>
+#include <fstream>
+#include <QFile>
+#include  <QTextStream>
+#include <QMessageBox>
 
-Admin::Admin() {
-    id=0;
+int Admin :: nextId=0;
+
+Admin::Admin(std::string nom, std::string prenom, std::string adresse): Personne(nom, prenom,adresse) {
+    idAdmin = ++nextId;
+    writeAdmin(*this);
 }
+
 
 
 void Admin::nbColisLivres(Chauffeur Chauffeur) const
@@ -29,3 +37,20 @@ void Admin::nbColisLivres(Chauffeur Chauffeur) const
     // Revoir cette fonction, peut-être pas utile/pas possible à réaliser car manque le prix etc..
     // Voir si l'on peut pas ajouter d'autres statistiques à la place de celle-ci.
 //}
+
+void Admin::writeAdmin( const Admin& admin){
+    QFile file("Admin.txt");
+    if(file.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)){
+        QTextStream ecriture(&file);
+        ecriture << admin.toString() << Qt::endl;
+        file.close();
+    }else{
+        std::cerr << "erreur d'ouverture du fichier chauffeur.txt "<< std::endl;
+    }
+}
+
+QString Admin::toString() const
+{
+    QString result =  QString::fromStdString(std::to_string(idAdmin) + "|" + nom + "|" + prenom + "|" + adresse);
+    return result;
+}

@@ -15,9 +15,10 @@ public:
     void ajout(Trajet trajet);
     void supprimer(int index);
     void modifier(int index, Trajet trajet);
-
+    void writeChauffeur( const Chauffeur& chauffeur);
+    QString toString() const;
 private:
-    int id;
+    int idChauffeur;
     std::vector<Trajet> listeTrajets;
     static int nextId;
 };

@@ -15,9 +15,10 @@ public:
     void remplir();
     void dispatch(std::vector<Trajet>& trajets);
     std::vector<Colis> getColis();
-
+    void writeDispatcher( const Dispatcher& dispatcher);
+    QString toString() const;
 private:
-    int id;
+    int idDispatcher;
     std::vector<Colis> listeColis;
 
 };
