@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dispatcher_interface</class>
+ <widget class="QDialog" name="Dispatcher_interface">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>891</width>
+    <height>599</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QListWidget" name="listWidget_colis">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>180</y>
+     <width>256</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Nouvel élément</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Nouvel élément</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Nouvel élément</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Nouvel élément</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Nouvel élément</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>60</y>
+     <width>201</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Dispatcher</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>400</y>
+     <width>311</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Dispatch</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
