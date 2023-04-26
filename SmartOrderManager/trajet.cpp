@@ -36,9 +36,6 @@ void Trajet::writeTrajet( const Trajet& trajet){
 }
 
 
-
-
-
 void Trajet::modifierTrajet(int idTrajet, const Trajet& trajet){
 
     for (int i =0; i < AllTrajet.size(); i++ ){
@@ -50,9 +47,11 @@ void Trajet::modifierTrajet(int idTrajet, const Trajet& trajet){
             AllTrajet[i].setStatus(trajet.getStatus());
             AllTrajet[i].setPoids(trajet.getPoids());
             AllTrajet[i].setPrix(trajet.getPrix());
-
         }
+        QFile::remove("Trajet.txt");
+            writeTrajet(*this);
     }
+
 
 
 }
@@ -109,11 +108,32 @@ void Trajet::setStatus(int status){
     this->status = status;
 }
 
+void Trajet::setVilleArrivee(const std::string& villeArrivee) {
+    this->villeArrivee = villeArrivee;
+}
+
+void Trajet::setVilleDepart(const std::string& villeDepart) {
+    this->villeDepart = villeDepart;
+}
+
+
+void Trajet::setHoraireArrivee(const std::string& horaireArrivee) {
+    this->horaireArrivee = horaireArrivee;
+}
+
+void Trajet::setHoraireDepart(const std::string& horaireDepart) {
+    this->horaireDepart = horaireDepart;
+}
+void Trajet::setPoids(double poids){
+    this->poids = poids;
+}
+void Trajet::setPrix(double prix){
+    this->prix = prix;
+}
 QString Trajet::toString() const
 {
     QString result =  QString::fromStdString(std::to_string(idTrajet) + "|" + std::to_string(idChauffeur) + "|" + villeDepart + "|" + villeArrivee + "|"
                                             + horaireDepart + "|" + horaireArrivee + "|" + std::to_string(poids) + "|" + std::to_string(prix) + "|" + std::to_string(status) + "|"+ std::to_string(nombreColis));
     return result;
-
 }
 
