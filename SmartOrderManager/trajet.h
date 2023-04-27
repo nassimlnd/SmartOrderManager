@@ -4,7 +4,7 @@
 #include <string>
 #include <QString>
 #include <vector>
-
+#include <string>
 class Trajet {
 public:
 
@@ -31,6 +31,8 @@ public:
     void setStatus(int status);
     void setNombreColis(int nombreColis);
     QString toString() const;
+    void writeTrajet( Trajet& trajet);
+    void modifierTrajet(int idTrajet,  Trajet& trajet);
 private:
     int idTrajet;
     int idChauffeur;
@@ -45,9 +47,7 @@ private:
 
     //ajout du trajet dans le txt au moment ou il est créée.
     //std::string const fileLocation;
-    void writeTrajet(const Trajet& trajet);
 
-    void modifierTrajet(int idTrajet, const Trajet& trajet);
 
 };
 
