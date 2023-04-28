@@ -16,8 +16,8 @@
   <widget class="QListWidget" name="listWidget_colis">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>180</y>
+     <x>90</x>
+     <y>160</y>
      <width>256</width>
      <height>171</height>
     </rect>
@@ -73,6 +73,41 @@
    <property name="text">
     <string>Dispatch</string>
    </property>
+  </widget>
+  <widget class="QListWidget" name="listWidget_colis_2">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>160</y>
+     <width>256</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Nouvel élément</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Nouvel élément</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Nouvel élément</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Nouvel élément</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Nouvel élément</string>
+    </property>
+   </item>
   </widget>
  </widget>
  <resources/>

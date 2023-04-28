@@ -29,6 +29,18 @@ set(PROJECT_SOURCES
         trajet.h
         colis.h
         colis.cpp
+        admin_interface.h
+        admin_interface.cpp
+        admin_interface.ui
+        chauffeur_interface.h
+        chauffeur_interface.cpp
+        chauffeur_interface.ui
+        dispatcher_interface.h
+        dispatcher_interface.cpp
+        dispatcher_interface.ui
+
+
+
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

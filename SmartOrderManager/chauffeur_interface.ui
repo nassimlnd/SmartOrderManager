@@ -16,8 +16,8 @@
   <widget class="QLabel" name="label_chaufefur">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>50</y>
+     <x>160</x>
+     <y>30</y>
      <width>211</width>
      <height>41</height>
     </rect>
@@ -26,24 +26,11 @@
     <string>Nom du chauffeur</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_ajouter_chauffeur">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>350</y>
-     <width>93</width>
-     <height>29</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>ajouter</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="pushButton_modifier_chauffeur">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>360</y>
+     <x>160</x>
+     <y>490</y>
      <width>93</width>
      <height>29</height>
     </rect>
@@ -55,8 +42,8 @@
   <widget class="QPushButton" name="pushButton_supprimer_chauffeur">
    <property name="geometry">
     <rect>
-     <x>750</x>
-     <y>370</y>
+     <x>790</x>
+     <y>490</y>
      <width>93</width>
      <height>29</height>
     </rect>
@@ -68,8 +55,8 @@
   <widget class="QListWidget" name="listWidget_trajets">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>170</y>
+     <x>360</x>
+     <y>310</y>
      <width>256</width>
      <height>111</height>
     </rect>
@@ -94,6 +81,80 @@
      <string>Nouvel élément</string>
     </property>
    </item>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>50</y>
+     <width>113</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_chaufefur_2">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>110</y>
+     <width>211</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Prenom du chauffeur</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_chaufefur_3">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>180</y>
+     <width>211</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Adresse du chauffeur</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>120</y>
+     <width>113</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_3">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>180</y>
+     <width>113</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>250</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);
+font: 700 20pt &quot;Times New Roman&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Liste des colis</string>
+   </property>
   </widget>
  </widget>
  <resources/>

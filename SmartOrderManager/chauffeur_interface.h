@@ -4,19 +4,19 @@
 #include <QDialog>
 
 namespace Ui {
-class chauffeur_interface;
+class Chauffeur_interface;
 }
 
-class chauffeur_interface : public QDialog
+class Chauffeur_interface : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit chauffeur_interface(QWidget *parent = nullptr);
-    ~chauffeur_interface();
+    explicit Chauffeur_interface(QWidget *parent = nullptr);
+    ~Chauffeur_interface();
 
 private:
-    Ui::chauffeur_interface *ui;
+    Ui::Chauffeur_interface *ui;
 };
 
 #endif // CHAUFFEUR_INTERFACE_H

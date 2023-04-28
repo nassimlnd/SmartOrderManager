@@ -39,7 +39,7 @@ void Trajet::writeTrajet(  Trajet& trajet){
 
 
 void Trajet::modifierTrajet(int idTrajet,  Trajet& trajet){
-
+/*
     QFile file("Trajet.txt");
     QFile file2("tempo.txt");
     std::vector<Trajet> ligneTrajet;
@@ -105,6 +105,7 @@ void Trajet::modifierTrajet(int idTrajet,  Trajet& trajet){
     file2.close();
     remove("Trajet.txt");
     rename("tempo.txt","Trajet.txt");
+    */
 }
 
 
