@@ -21,6 +21,7 @@ private:
     int idChauffeur;
     std::vector<Trajet> listeTrajets;
     static int nextId;
+
 };
 
 #endif // CHAUFFEUR_H

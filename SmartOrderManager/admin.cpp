@@ -5,6 +5,7 @@
 #include <QFile>
 #include  <QTextStream>
 #include <QMessageBox>
+#include "chauffeur.cpp"
 
 int Admin :: nextId=0;
 
@@ -46,6 +47,13 @@ void Admin::writeAdmin( const Admin& admin){
         file.close();
     }else{
         std::cerr << "erreur d'ouverture du fichier chauffeur.txt "<< std::endl;
+    }
+}
+
+void FindById(int idChauffeur){
+    for (int i =0; i<listeChauffeur.size();i++){
+        if(idChauffeur == i)
+            break;
     }
 }
 

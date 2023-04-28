@@ -16,7 +16,7 @@
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow),admin_interface(new Admin_interface),chauffeur_interface(new Chauffeur_interface), dispatcher_interface(new Dispatcher_interface), adresseChauffeur(new Chauffeur),adresseAdmin(new Admin), adresseDispatcher( new Dispatcher)
+    , ui(new Ui::MainWindow),admin_interface(new Admin_interface),chauffeur_interface(new Chauffeur_interface), dispatcher_interface(new Dispatcher_interface)//, adresseChauffeur(new Chauffeur),adresseAdmin(new Admin), adresseDispatcher( new Dispatcher)
 {
     ui->setupUi(this);
     connect(ui->actionQuitter,&QAction::triggered,this,&MainWindow::close); //bouton pour quitter la fenetre

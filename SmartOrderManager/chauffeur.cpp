@@ -5,6 +5,10 @@
 #include <QFile>
 #include  <QTextStream>
 #include <QMessageBox>
+#include <vector>
+
+
+std::vector<Chauffeur> listeChauffeur;
 
 int Chauffeur :: nextId=0;
 
@@ -12,6 +16,7 @@ Chauffeur::Chauffeur(std::string nom, std::string prenom, std::string adresse) :
 {
     idChauffeur = ++nextId;
     writeChauffeur(*this);
+    listeChauffeur.push_back(*this);
 }
 
 int Chauffeur::getId()
@@ -48,6 +53,7 @@ void Chauffeur::writeChauffeur( const Chauffeur& chauffeur){
         std::cerr << "erreur d'ouverture du fichier chauffeur.txt "<< std::endl;
     }
 }
+
 
 QString Chauffeur::toString() const
 {

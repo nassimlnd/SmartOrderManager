@@ -18,15 +18,15 @@
     <rect>
      <x>350</x>
      <y>40</y>
-     <width>191</width>
+     <width>261</width>
      <height>61</height>
     </rect>
    </property>
    <property name="text">
-    <string>Choisissez votre chauffeur</string>
+    <string>Choisissez votre chauffeur avec son id</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="lineEdit_Chauff">
    <property name="geometry">
     <rect>
      <x>380</x>

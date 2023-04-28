@@ -18,6 +18,8 @@ class Admin : public Personne {
         void montantCollecte(Chauffeur Chauffeur) const;
         void writeAdmin( const Admin& admin);
         QString toString() const;
+        void FindById(int idChauffeur) const;
+
 
 };
 
