@@ -5,7 +5,6 @@
 #include <vector>
 #include "Personne.h"
 #include "Chauffeur.h"
-#include "Colis.h"
 
 class Admin : public Personne {
     private:

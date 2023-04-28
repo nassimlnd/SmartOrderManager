@@ -7,15 +7,15 @@ Chauffeur_interface::Chauffeur_interface(QWidget *parent) :
     ui(new Ui::Chauffeur_interface), Chauffeur("nom", "prenom", "adresse")
 {
     ui->setupUi(this);
-    connect(ui->pushButton_modifier_chauffeur,&QPushButton::clicked, this,&MainWindow::ModifierChauffeur);
+    connect(ui->pushButton_modifier_chauffeur,&QPushButton::clicked, this, &Chauffeur_interface::ModifierChauffeur);
 
 }
 void Chauffeur_interface::ModifierChauffeur(){
-    QString NomChauffeur = ;
+    QString NomChauffeur = "";
     ui->lineEdit->setText(NomChauffeur);
-    QString PrenomomChauffeur = ; //remplir avec les information de la connexion du Chauffeur
+    QString PrenomomChauffeur = ""; //remplir avec les information de la connexion du Chauffeur
     ui->lineEdit_2->setText(PrenomomChauffeur);
-    QString AdresseChauffeur = ;
+    QString AdresseChauffeur = "";
     ui->lineEdit_3->setText(AdresseChauffeur);
 }
 

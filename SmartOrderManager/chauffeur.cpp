@@ -1,9 +1,9 @@
 #include "Chauffeur.h"
-#include "personne.h"
+#include "Personne.h"
 #include <fstream>
 #include <iostream>
 #include <QFile>
-#include  <QTextStream>
+#include <QTextStream>
 #include <QMessageBox>
 #include <vector>
 
@@ -28,6 +28,8 @@ std::vector<Trajet> Chauffeur::getTrajets()
 {
     return listeTrajets;
 }
+
+
 
 void Chauffeur::ajout(Trajet trajet)
 {

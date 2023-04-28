@@ -17,6 +17,7 @@ public:
     void modifier(int index, Trajet trajet);
     void writeChauffeur( const Chauffeur& chauffeur);
     QString toString() const;
+
 private:
     int idChauffeur;
     std::vector<Trajet> listeTrajets;

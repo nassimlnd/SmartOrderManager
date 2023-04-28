@@ -6,7 +6,7 @@
 #include  <QTextStream>
 #include <QPushButton>
 #include <string>
-#include <QString>
+#include <Qstring>
 #include <QLineEdit>
 #include "chauffeur_interface.h"
 #include "admin_interface.h"
@@ -42,12 +42,12 @@ void MainWindow::connexion_action()
    //si la personne qui se connecte est un admin
     //if (adresse == adresseAdmin)
    // {
-        admin_interface->open();
+        //admin_interface->open();
    // }
         //si la personne qui se connecte est un dispatcher
-     /*  else if(){
-      *  dispatcher_interface->open();
-    }*/
+     //  else if(){
+        dispatcher_interface->open();
+    //}
         //si la personne qui se connecte est un chauffeur
    /* else ()
     chauffeur_interface->open();

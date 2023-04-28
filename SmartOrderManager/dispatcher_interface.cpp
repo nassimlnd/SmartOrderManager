@@ -8,7 +8,7 @@ Dispatcher_interface::Dispatcher_interface(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QString NomDispatcher = ;
+    QString NomDispatcher = "";
     ui->label->setText(NomDispatcher);   //mettre le nom du dispatcher lors de la connexion
 }
 

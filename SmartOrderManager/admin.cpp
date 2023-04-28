@@ -3,15 +3,15 @@
 #include <iostream>
 #include <fstream>
 #include <QFile>
-#include  <QTextStream>
+#include <QTextStream>
 #include <QMessageBox>
-#include "chauffeur.cpp"
+#include "Chauffeur.h"
 
 int Admin :: nextId=0;
 
 Admin::Admin(std::string nom, std::string prenom, std::string adresse): Personne(nom, prenom,adresse) {
     idAdmin = ++nextId;
-    writeAdmin(*this);
+    //writeAdmin(*this);
 }
 
 
@@ -28,6 +28,7 @@ void Admin::nbColisLivres(Chauffeur Chauffeur) const
     //Ajouter le nombre de colis présents dans un trajet // FAIT
     //le récupérer pour chaque trajet associé au chauffeur pour récupérer le nombre de colis total livrés par le chauffeur.
 }
+
 /*void Admin::montantCollecte(Chauffeur chauffeur) {
     /*double montant = 0;
     for (Trajet trajet : chauffeur.getTrajets()) {
@@ -39,7 +40,7 @@ void Admin::nbColisLivres(Chauffeur Chauffeur) const
     // Voir si l'on peut pas ajouter d'autres statistiques à la place de celle-ci.
 //}
 
-void Admin::writeAdmin( const Admin& admin){
+void Admin::writeAdmin(const Admin& admin){
     QFile file("Admin.txt");
     if(file.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)){
         QTextStream ecriture(&file);
@@ -50,12 +51,12 @@ void Admin::writeAdmin( const Admin& admin){
     }
 }
 
-void FindById(int idChauffeur){
-    for (int i =0; i<listeChauffeur.size();i++){
+/*void Admin::FindById(int idChauffeur) const{
+    for (int i =0; i < getListeChauffeur().size();i++){
         if(idChauffeur == i)
             break;
     }
-}
+}*/
 
 QString Admin::toString() const
 {

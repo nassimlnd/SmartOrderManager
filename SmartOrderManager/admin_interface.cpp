@@ -5,7 +5,7 @@
 #include <QFile>
 #include <fstream>
 #include <iostream>
-#include  <QTextStream>
+#include <QTextStream>
 #include <QPushButton>
 #include <string>
 #include <QString>
@@ -39,7 +39,7 @@ void Admin_interface::FindByIdInter()
         int idChauffeur = idChauffeurString.toInt();
 
         // Appel de la fonction "findbyid" de la classe "Chauffeur"
-            Admin::FindById(idChauffeur);
+            //Admin::FindById(idChauffeur);
 
 }
 Admin_interface::~Admin_interface()

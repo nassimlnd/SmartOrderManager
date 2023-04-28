@@ -39,8 +39,7 @@ void Trajet::writeTrajet(  Trajet& trajet){
 
 
 void Trajet::modifierTrajet(int idTrajet,  Trajet& trajet){
-/*
-    QFile file("Trajet.txt");
+    /*QFile file("Trajet.txt");
     QFile file2("tempo.txt");
     std::vector<Trajet> ligneTrajet;
     std::string ligne;
@@ -96,7 +95,7 @@ void Trajet::modifierTrajet(int idTrajet,  Trajet& trajet){
 
                 std::string ligneT = std::to_string(t.idChauffeur) + "|" + t.villeDepart + "|" + t.villeArrivee + "|" + t.horaireDepart + "|" + t.horaireArrivee + "|" + std::to_string(t.poids) + "|" + std::to_string(t.prix) + "|" + std::to_string(t.status);
 
-                ecriture << ligneT<< endl;
+                ecriture << &ligneT << Qt::endl;
 
             }
     }
@@ -104,8 +103,7 @@ void Trajet::modifierTrajet(int idTrajet,  Trajet& trajet){
     file.close();
     file2.close();
     remove("Trajet.txt");
-    rename("tempo.txt","Trajet.txt");
-    */
+    rename("tempo.txt","Trajet.txt");*/
 }
 
 
