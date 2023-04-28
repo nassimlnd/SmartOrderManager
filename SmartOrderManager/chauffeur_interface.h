@@ -15,6 +15,7 @@ class Chauffeur_interface : public QDialog, public Chauffeur
 public:
     explicit Chauffeur_interface(QWidget *parent = nullptr);
     ~Chauffeur_interface();
+    void ModifierChauffeur();
 
 private:
     Ui::Chauffeur_interface *ui;
